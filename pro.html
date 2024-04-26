@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-AU-compatible" content="IE=edge">
+  <title>BIOTEGNOLOGIA</title>
+  <link rel="stylesheet" href="pro.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="imagenes/biotegnologia.png">
+</head>
+<body>
+  <div id="divmenu" class="navbar-container">
+    <nav class="navbar">
+      <a href="index.html" target="_blank"><img src="imagenes/biotegnologia.png"></a>
+      <ul id="menu">
+        <!-- Botón para mostrar/ocultar el menú -->
+        <button class="dropdown" onclick="toggleDropdown()"><img src="imagenes/menu.png" alt=""></button>
+
+        <!-- Menú desplegable -->
+        <div class="dropdown-content" id="myDropdown">
+          <a href="pro.html"><strong>Profesores</strong></a>
+          <a href="hora.html"><strong>Horarios</strong></a>
+        </div>
+
+        <script>
+          // Función para mostrar u ocultar el menú
+          function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            if (dropdown.style.display === "block") {
+              dropdown.style.display = "none";
+            } else {
+              dropdown.style.display = "block";
+            }
+          }
+        </script>
+        <li><a href="index.html"> <strong>Inicio</strong></a></li>
+        <li><a href="pag-ayuda.html"><strong>Ayuda</strong></a></li>
+        <li><a href="contacto.html"><strong>Contacto</strong></a></li>
+        <a href="http://uruapan.cecytem.net/" target="_blank"><img src="imagenes/cecytem.png"></a>
+        
+      </ul>
+    </nav>
+  </div>
+  <div class="imagenes1">
+    <div>
+      <img src="imagenes/persona.png" alt="">
+      <span class="nombre-maestro">Eliseo</span>
+    </div>
+    <div class="imagenes2">
+      <img src="imagenes/persona.png" alt="">
+      <span class="nombre-maestro">Zan Cuiris</span>
+    </div>
+    <div class="imagenes3">
+      <img src="imagenes/persona.png" alt="">
+      <span class="nombre-maestro">Felipe Natividad</span>
+    </div>
+    <br>
+    <div class="imagenes4">
+      <img src="imagenes/persona.png" alt="">
+      <span class="nombre-maestro">Juan Jose Gonzales Espinoza</span>
+    </div>
+  </div>
+  <div class="bloque1">
+    <strong>Eliseo</strong>
+    <p>El maestro es otro de los profesores que imparten los modulos en el plantel</p>
+  </div>
+  <div class="bloque2">
+    <strong>Zan Cuiris</strong>
+    <p>El maestro es biologo marino, y es uno de los encargados de enseñar los modulos a los alumnos</p>
+  </div>
+  <div class="bloque3">
+    <strong>Felipe Natividad</strong>
+    <p>Es otro de los encargados de enseñar los modulos en nuestra instalacion , es titulado en ingieneria bioquimica y una de sus metas es que el alumno se supere a si mismo y si los alumnos lo desean encaminarlos en el camino de la ingieneria bioquimica.</p>
+  </div>
+  <div class="bloque4">
+    <strong>Juan Jose Gonzales Espinoza</strong>
+    <p>El maestro antes trabajaba fuera del plantel ejerciendo su carrera y se le dio la oportunidad de entrar como maestro del plantel y tomo la oportunidad y tambien imparte los modulos en nuestro plantel</p>
+  </div>
+  <div id="pie">
+    <ul id="redes">
+      <a href="https://www.facebook.com/cecyteuruapan20/" target="_blank"><img src="imagenes/facebook.png"></a>
+      <a href="https://www.instagram.com/explore/locations/895801930/cecytem-plantel-20-uruapan/" target="_blank"><img src="imagenes/instagram.png"></a>
+      <a href="https://www.facebook.com/cecyteuruapan20/?locale=es_LA" target="_blank"><img src="imagenes/tiktok.png"></a>
+    </ul>
+    <footer>
+      Derechos reservados &copy; 2013-2024
+    </footer>
+  </div>
+
+  <script>
+    // Función para desplazarse al bloque1 cuando se hace clic en la imagen de imagenes1
+    document.querySelector('.imagenes1').addEventListener('click', function() {
+      // Desplazarse al bloque1
+      document.querySelector('.bloque1').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BIOTEGNOLOGIA</title>
+    <link rel="stylesheet" href="hora.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="imagenes/biotegnologia.png">
+</head>
+<body>
+    <div id="divmenu" class="navbar-container">
+      <nav class="navbar">
+        <a href="index.html" target="_blank"><img src="imagenes/biotegnologia.png"></a>
+        <ul id="menu">
+          <!-- Botón para mostrar/ocultar el menú -->
+          <button class="dropdown" onclick="toggleDropdown()"><img src="imagenes/menu.png" alt=""></button>
+  
+          <!-- Menú desplegable -->
+          <div class="dropdown-content" id="myDropdown">
+            <a href="pro.html"><strong>Profesores</strong></a>
+            <a href="hora.html"><strong>Horarios</strong></a>
+          </div>
+  
+          <script>
+            // Función para mostrar u ocultar el menú
+            function toggleDropdown() {
+              var dropdown = document.getElementById("myDropdown");
+              if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+              } else {
+                dropdown.style.display = "block";
+              }
+            }
+          </script>
+          <li><a href="index.html"> <strong>Inicio</strong></a></li>
+          <li><a href="pag-ayuda.html"><strong>Ayuda</strong></a></li>
+          <li><a href="contacto.html"><strong>Contacto</strong></a></li>
+          <a href="http://uruapan.cecytem.net/" target="_blank"><img src="imagenes/cecytem.png"></a>
+          
+        </ul>
+      </nav>
+    </div>
+    <strong></strong>
+    <div class="imagenes">
+        <img src="imagenes/h1.jpg">
+        <img src="imagenes/h2.jpg">
+        <img src="imagenes/h3.jpg">
+        <img src="imagenes/h4.jpg">
+        <img src="imagenes/h5.jpg">
+        <img src="imagenes/h6.jpg">
+    </div>
+    <br>
+    <div class="boton">
+        <button onclick="showDownloadMenu()" class="btn"><i class="fa fa-download"></i><strong>Descargar Archivos</strong></button>
+        <div id="downloadMenu" style="display: none;">
+            <strong>selecciona los archivos deseados:</strong>
+            <br>
+            <input type="checkbox" id="h1Checkbox" name="h1" value="imagenes/h1.jpg"> <label for="h1Checkbox">202-A</label><br>
+            <input type="checkbox" id="h2Checkbox" name="h2" value="imagenes/h2.jpg"> <label for="h2Checkbox">202-B</label><br>
+            <input type="checkbox" id="h3Checkbox" name="h3" value="imagenes/h3.jpg"> <label for="h3Checkbox">402-A</label><br>
+            <input type="checkbox" id="h4Checkbox" name="h4" value="imagenes/h4.jpg"> <label for="h4Checkbox">402-B</label><br>
+            <input type="checkbox" id="h5Checkbox" name="h5" value="imagenes/h5.jpg"> <label for="h5Checkbox">602-A</label><br>
+            <input type="checkbox" id="h6Checkbox" name="h6" value="imagenes/h6.jpg"> <label for="h6Checkbox">602-B</label><br>
+            <input type="checkbox" id="pdfCheckbox" name="pdf" value="horarios.pdf"> <label for="pdfCheckbox">todos</label><br>
+            <button onclick="downloadSelectedFiles()" class="btn"><i class="fa fa-save"></i><strong>Descargar </strong></button>
+        </div>
+    </div>
+    <br>
+    <div id="pie">
+        <ul id="redes">
+            <a href="https://www.facebook.com/cecyteuruapan20/" target="_blank"><img src="imagenes/facebook.png"></a>
+            <a href="https://www.instagram.com/explore/locations/895801930/cecytem-plantel-20-uruapan/" target="_blank"><img src="imagenes/instagram.png"></a>
+            <a href="https://www.facebook.com/cecyteuruapan20/?locale=es_LA" target="_blank"><img src="imagenes/tiktok.png"></a>
+        </ul>
+        <footer>
+            Derechos reservados &copy; 2013-2024
+        </footer>
+    </div>
+
+    <script>
+        function showDownloadMenu() {
+            var downloadMenu = document.getElementById("downloadMenu");
+            if (downloadMenu.style.display === "none" || downloadMenu.style.display === "") {
+                downloadMenu.style.display = "block";
+            } else {
+                downloadMenu.style.display = "none";
+            }
+        }
+
+        function downloadSelectedFiles() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            checkboxes.forEach(function(checkbox) {
+                var filename = checkbox.value;
+                var link = document.createElement('a');
+                link.href = filename;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+    </script>
+</body>
+</html>
